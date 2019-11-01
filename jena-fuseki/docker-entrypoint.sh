@@ -22,7 +22,6 @@ if [ ! -f "$FUSEKI_BASE/shiro.ini" ] ; then
   echo "Initializing Apache Jena Fuseki"
   echo ""
   cp "$FUSEKI_HOME/shiro.ini" "$FUSEKI_BASE/shiro.ini"
-  cp "$FUSEKI_HOME/ntb.ttl" "$FUSEKI_BASE/configuration/ntb.ttl"
   if [ -z "$ADMIN_PASSWORD" ] ; then
     ADMIN_PASSWORD=$(pwgen -s 15)
     echo "Randomly generated admin password:"
