@@ -48,6 +48,12 @@ if [ -f "$FUSEKI_BASE/system/tdb.lock" ]; then
   echo "removed"
 fi
 
+if [ -f "$FUSEKI_BASE/databases/ntb/tdb.lock" ]; then
+  echo "removing tdb lock"
+  rm "$FUSEKI_BASE/databases/ntb/tdb.lock"
+  echo "removed"
+fi
+
 
 # $ADMIN_PASSWORD can always override
 if [ -n "$ADMIN_PASSWORD" ] ; then
