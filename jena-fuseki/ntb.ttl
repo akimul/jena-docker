@@ -19,4 +19,4 @@
 :tdb_dataset_readwrite
         a             tdb:DatasetTDB ;
         tdb:unionDefaultGraph true;
-        tdb:location "/jena-fuseki/run/databases/ntb" .
+        tdb:location "/fuseki/databases/ntb" .

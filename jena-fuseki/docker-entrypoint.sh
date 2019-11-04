@@ -32,11 +32,13 @@ if [ ! -f "$FUSEKI_BASE/shiro.ini" ] ; then
   echo "###################################"
 fi
 
-
+echo "creating config fir"
 mkdir -p "$FUSEKI_BASE/configuration"
 
 if [ -d "$FUSEKI_BASE/configuration" ]; then
+  echo "copying ntb config"
   cp "$FUSEKI_HOME/ntb.ttl" "$FUSEKI_BASE/configuration/ntb.ttl"
+  echo "copy done"
 fi
 
 
