@@ -66,6 +66,7 @@ RUN  /jena-fuseki/fuseki-server & \
 # we'll enable basic-auth with a random admin password
 # (which we'll generate on start-up)
 COPY shiro.ini /jena-fuseki/shiro.ini
+COPY ntb.ttl $FUSEKI_BASE/configuration/ntb.ttl
 COPY docker-entrypoint.sh /
 RUN chmod 755 /docker-entrypoint.sh
 
