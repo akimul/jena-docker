@@ -23,7 +23,7 @@ if [ ! -f "$FUSEKI_BASE/shiro.ini" ] ; then
   echo ""
   cp "$FUSEKI_HOME/shiro.ini" "$FUSEKI_BASE/shiro.ini"
   if [ -z "$ADMIN_PASSWORD" ] ; then
-    ADMIN_PASSWORD=$(pwgen -s 15)
+    ADMIN_PASSWORD='admin'
     echo "Randomly generated admin password:"
     echo ""
     echo "admin=$ADMIN_PASSWORD"
@@ -31,6 +31,14 @@ if [ ! -f "$FUSEKI_BASE/shiro.ini" ] ; then
   echo ""
   echo "###################################"
 fi
+
+
+mkdir -p "$FUSEKI_BASE/configuration"
+
+if [ ! -d "$FUSEKI_BASE/configuration" ]; then
+  cp "$FUSEKI_HOME/ntb.ttl" "$FUSEKI_BASE/configuration/ntb.ttl"
+fi
+
 
 # $ADMIN_PASSWORD can always override
 if [ -n "$ADMIN_PASSWORD" ] ; then
