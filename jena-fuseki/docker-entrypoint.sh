@@ -41,10 +41,10 @@ if [ -d "$FUSEKI_BASE/configuration" ]; then
   echo "copy done"
 fi
 
-TDB_LOCK = "$FUSEKI_BASE/system/tdb.lock"
-if [ -f $TDB_LOCK ]; then
+
+if [ -f "$FUSEKI_BASE/system/tdb.lock" ]; then
   echo "removing tdb lock"
-  rm $TDB_LOCK
+  rm "$FUSEKI_BASE/system/tdb.lock"
   echo "removed"
 fi
 
