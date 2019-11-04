@@ -35,7 +35,7 @@ fi
 
 mkdir -p "$FUSEKI_BASE/configuration"
 
-if [ ! -d "$FUSEKI_BASE/configuration" ]; then
+if [ -d "$FUSEKI_BASE/configuration" ]; then
   cp "$FUSEKI_HOME/ntb.ttl" "$FUSEKI_BASE/configuration/ntb.ttl"
 fi
 
