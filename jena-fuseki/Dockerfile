@@ -34,7 +34,7 @@ ENV ASF_ARCHIVE http://archive.apache.org/dist/
 #
 
 # Config and data
-VOLUME /fuseki
+
 ENV FUSEKI_BASE /fuseki
 
 
